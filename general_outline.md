@@ -24,6 +24,9 @@
 	1. What are CIS Benchmarks?
 	2. What do they cover?
 	3. Companies Utilizing CIS benchmarks
+	  1. Cloud Providers themselves
+		2. Third party providers
+		3. VARs
 	4. OSS Tools that utilize CIS Benchmarks
 5. Demos!
 	1. Prowler
