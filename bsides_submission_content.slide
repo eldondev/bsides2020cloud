@@ -1,0 +1,44 @@
+Manuals for Herding Clouds: Free tools for improved security
+
+Eldon Stegall
+bsides2020@eldondev.com
+
+* What is a public cloud?
+
+A business hosting on-demand provisioned
+computing infrastructure for anyone with a
+credit card on the internets!
+
+Best-known players:
+
+- AWS (Amazon Web Services)
+- GCP (Google Compute Platform)
+- Azure
+
+Also-known:
+- Packet
+- Digital Ocean
+- Oracle Cloud
+- Rackspace
+
+: Let's be honest, some folks are just sitting here to have a seat for the next talk, let's include them!
+
+* What kinds of services do public clouds offer?
+
+- Compute (We rent you a VM)
+- Object (We store files for you. We give them to you, or anybody you want. Usually.)
+- Databases (All your postgres are belong to us.)
+- Network (I bet you'll like this firewall!.)
+
+* Ok, but how is this new or different? ELI5
+
+Ok, if you're 5, then AWS is almost 3 times as old as you! But we'll try to summarize.
+<Insert cheesy picture of a bunch of racks on fire>
+
+- You could point at a disk and guess what was on it.
+- If you turned off the top-of-rack-switch, nothing could get in or out.
+- If someone was DDoSing you, you noticed, and were lucky if you could scrounge an SSH session in!
+
+: In the old days, your network was probably contained in a rack (or two) or mainframe (or 5) in a datacenter (or 3). Maybe somebody worked in the datacenter all the time! Chances were, though, you needed someone close by. Maybe Michelle got that rough job because she lived the closes. But then, she ended up just working at the datacenter many days. Because things broke all the time! Brent blew away the network config? Call Michelle. Jimmy just `rm -rf`'ed "persephone"? Call Michelle!
+
+
