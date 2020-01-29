@@ -1,7 +1,7 @@
 * General outline of talk
 
 1. What is cloud computing
-	1. Who are the  big players
+	1. Who are the big players
 	2. What do they do for you.
 	3. How is it different from prior strategies.
 	4. What are the high-level risks (exfil, misconfig, monitoring)
@@ -21,15 +21,15 @@
 	4. Dangling DNS
 	5. Security Group misconfiguration
 4. Cloud built-in monitoring capabilities:
-  1. API call logs
+	1. API call logs
 	2. Billing logs
 	3. Network logs
-	  1. Now with pcap!
+		1. Now with pcap!
 5. Discuss CIS benchmarks
 	1. What are CIS Benchmarks?
 	2. What do they cover?
 	3. Companies Utilizing CIS benchmarks
-	  1. Cloud Providers themselves
+		1. Cloud Providers themselves
 		2. Third party providers
 		3. VARs
 	4. OSS Tools that utilize CIS Benchmarks
