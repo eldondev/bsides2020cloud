@@ -20,7 +20,12 @@
 	3. SSRF
 	4. Dangling DNS
 	5. Security Group misconfiguration
-4. Discuss CIS benchmarks
+4. Cloud built-in monitoring capabilities:
+  1. API call logs
+	2. Billing logs
+	3. Network logs
+	  1. Now with pcap!
+5. Discuss CIS benchmarks
 	1. What are CIS Benchmarks?
 	2. What do they cover?
 	3. Companies Utilizing CIS benchmarks
@@ -28,13 +33,13 @@
 		2. Third party providers
 		3. VARs
 	4. OSS Tools that utilize CIS Benchmarks
-5. Demos!
+6. Demos!
 	1. Prowler
 	2. ScoutSuite2
-6. Bonus material for extra time!
+7. Bonus material for extra time!
 	1. Using kubernetes to automate these tasks
 	2. Sending output to ElasticSearch
-7. Wrap-up, philosophy:
+8. Wrap-up, philosophy:
 	1. Keeping up with the clouds
 	2. Unifying the control plane
 	3. What's next?
