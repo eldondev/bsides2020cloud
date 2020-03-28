@@ -21,6 +21,13 @@ bsides2020@eldondev.com
 : Major component of modern IT.
 : Notoriously hard to secure and monitor.
 
+* Basic (Optimistic) Outline of the talk
+
+- 60,000 ft view for people unfamiliar with cloud technologies
+- Personal Journey
+- Discussion of some specific cloud components 	
+- Brief tour of the actual components
+
 * What is a public cloud? (I've been in the bathroom)
 
 A business hosting on-demand provisioned
@@ -47,6 +54,8 @@ Also-known:
 - Object (We store files for you. We give them to you, or anybody you want. Usually.)
 - Databases (All your postgres are belong to us.)
 - Network (I bet you'll like this firewall!.)
+
+.image amazon_svc_small.jpg
 
 * Ok, but how is this new or different? ELI5
 
@@ -82,25 +91,105 @@ Today:
 - Constantly revising security posture
 - Rapid movement to kubernetes
 
-* Choosing What To Monitor
+* Choosing How To Monitor
 
-# Monitoring needs to be familiar to industry
+Monitoring needs to be familiar to industry
 
 - Educating customers on security approach increases sales cycle time
 - Bespoke security strategies create documentation work
-
-# Must be straightforward to learn/implement
--  Small team
--	Rapidly changing organization
--	Minimal overhead to set up
+- Vendors are an easy choice to offload work to
+- Uniform monitoring across different public clouds
 
 * Candidates
 
+- Vendor A
+- Vendor B
+- Vendor C
+- Open Source
+
+: Coming from a small, fast development team, very frustrating
+
+* Vendors 
+
+Vendor A
+
+- Acquired by a larger company, product capabilities stagnated
+- Became high-touch, frequent new meetings distracted from other tasks
+
+Vendor B
+
+- Slow to respond to Support Requests
+- Offered standards-based monitoring, but was behind on current recommendations
+
+Vendor C
+
+- Overly complicated User Interface, which slowed to a halt with large amounts of ingest
+- Unable to effectively improve monitoring alerting (AI-based?!?)
+
+* The Takeaway
+
+Through our evaluation of vendors, we got a better indication of where the industry was focused.
+
+.link https://www.cisecurity.org/ Center for Internet Security
+
+Venerable organization, offers security recommendations for many software systems.
+1. Windows Server  Linux  Printers
+
+And now: 
+2. AWS! GCP!  Azure!
+
+And very recently
+3. Kubernetes !
 
 
+* Glory of Open Source
 
-Public Cloud Providers Allow for Different Business components to separate their functions
-- Frequently misused
+.image clouds.jpeg
+
+Real, actual itch-scratch software.
+Released by practitioners.
+Debuggable by users
+PRs welcome
+
+* Gathering the bits
+
+.link https://github.com/toniblyx/prowler  Prowler 
+.link https://github.com/cloud-custodian/cloud-custodian  Cloud custodian 
+.link https://github.com/aquasecurity/kube-bench  Kube-bench
+.link https://github.com/nccgroup/ScoutSuite  ScoutSuite
+
+* How to run it?
+
+-  Lambda: too ephemeral for some of our runs
+-  Locally: Needed scheduled monitoring
+-  EC2 instance: Easy setup, but scale up/scale down is tricky
+
+Finally decided to get our feet wet in this k8s mess:
+
+- Several other orgs already engaged with Kubernetes
+- Information streams into cloudwatch logs already
+- Cloudwatch logs is easy to connect to ElasticSearch
+- Elasticsearch can also serve as sink for additional data
+
+Kubernetes Strategy
+
+- One CronJob per account
+- Running Daily
+- Alerts/Remediation via Lambda
+
+* A Cautionary tale
+
+- Cloud Spend can get EXPENSIVE
+- Set Up Cost Monitoring
+- Use Cost Monitoring to find potential security issues
+
+
+: An example of cloud spend
+* Tour/Demo
+
+Sacrifice a Coffee Bean and a mechanical Keyboard
+
 * Image Credits:
 .link https://www.flickr.com/photos/49503122912@N01/18243536 Bins - Maria Alva Roff 
+.link https://www.flickr.com/photos/78428166@N00/6125639830 Clouds - Tony Alter
 
