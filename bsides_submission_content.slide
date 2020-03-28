@@ -3,7 +3,25 @@ Manuals for Herding Clouds: Free tools for improved security
 Eldon Stegall
 bsides2020@eldondev.com
 
-* What is a public cloud?
+
+* Who is this salty joker?
+
+.image profile_pic.jpeg
+
+- Approximately 15 years in industry, 10 years working in the cloud
+- 12 years security-adjacent
+- Small company guy (5 people to 500 people)
+
+* Why am I here?
+
+.image poltergeist.jpeg
+
+- I have stared into the cloud and it is terrifying
+
+: Major component of modern IT.
+: Notoriously hard to secure and monitor.
+
+* What is a public cloud? (I've been in the bathroom)
 
 A business hosting on-demand provisioned
 computing infrastructure for anyone with a
@@ -13,7 +31,7 @@ Best-known players:
 
 - AWS (Amazon Web Services)
 - GCP (Google Compute Platform)
-- Azure
+- Azure (Microsoft)
 
 Also-known:
 - Packet
@@ -21,7 +39,7 @@ Also-known:
 - Oracle Cloud
 - Rackspace
 
-: Let's be honest, some folks are just sitting here to have a seat for the next talk, let's include them!
+: Some folks have never felt the pain of public cloud computing, let's include them!
 
 * What kinds of services do public clouds offer?
 
@@ -33,12 +51,56 @@ Also-known:
 * Ok, but how is this new or different? ELI5
 
 Ok, if you're 5, then AWS is almost 3 times as old as you! But we'll try to summarize.
-<Insert cheesy picture of a bunch of racks on fire>
+
+In the days before cloud:
+
+.image small_dumpster.jpeg
 
 - You could point at a disk and guess what was on it.
 - If you turned off the top-of-rack-switch, nothing could get in or out.
 - If someone was DDoSing you, you noticed, and were lucky if you could scrounge an SSH session in!
 
-: In the old days, your network was probably contained in a rack (or two) or mainframe (or 5) in a datacenter (or 3). Maybe somebody worked in the datacenter all the time! Chances were, though, you needed someone close by. Maybe Michelle got that rough job because she lived the closes. But then, she ended up just working at the datacenter many days. Because things broke all the time! Brent blew away the network config? Call Michelle. Jimmy just `rm -rf`'ed "persephone"? Call Michelle!
+: In the old days, your network was probably contained in a rack (or two) or mainframe (or 5) in a datacenter (or 3). Maybe somebody worked in the datacenter all the time! Chances were, though, you needed someone close by. Maybe Michelle got that rough job because she lived the closest. But then, she ended up just working at the datacenter many days. Because things broke all the time! Brent blew away the network config? Call Michelle. Jimmy just `rm -rf`'ed "persephone"? Call Michelle!
 
+* Fast forward to today
+
+.image bins.jpg
+
+- Lots of Segmentation for different Business use cases
+- Sometimes a challenge to see what is inside the bin
+- Huge amount of flexibility in number/type of services
+
+* Personal Journey
+
+- Come from traditional Software Development Background
+- Joined Security Engineering team due to AWS/GCP experience
+- Small team, small budget
+
+Today:
+
+- Monitoring Security for ~ 1k+ AWS accounts (internal and external)
+- Constantly revising security posture
+- Rapid movement to kubernetes
+
+* Choosing What To Monitor
+
+# Monitoring needs to be familiar to industry
+
+- Educating customers on security approach increases sales cycle time
+- Bespoke security strategies create documentation work
+
+# Must be straightforward to learn/implement
+-  Small team
+-	Rapidly changing organization
+-	Minimal overhead to set up
+
+* Candidates
+
+
+
+
+Public Cloud Providers Allow for Different Business components to separate their functions
+- Frequently misused
+* Image Credits:
+.link https://www.flickr.com/photos/49503122912@N01/18243536 Bins - Maria Alva Roff 
 
